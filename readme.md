@@ -16,7 +16,9 @@ configure Group Policy on your computer to be able to use this service. See
 #### Using on a web server
 This project should work with any HTTP server with PHP support (PHP with curl
 extension required). To install, it simply rename `dummywsus.php` to `index.php`
-and drop to any directory on your web server. After doing this, you need to
+and drop to any directory on your web server. You also need `wuident.cab` from
+genuine WSUS server in the same directory. You can copy this file from `src`
+directory of preconfigured server. After doing all of this, you need to
 configure Group Policy on your computer to be able to use this service. See
 **Configuring Group Policy** for details.
 
@@ -43,6 +45,16 @@ To configure Group Policy:
    detecting updates* and *Set the intranet statistics server*
 
 6. Click *OK* and close the Group Policy Editor.
+
+### Windows Update Client compatibility
+This project was proven to work with the following Windows versions:
+* Windows Vista
+* Windows 7
+* Windows 8.1
+* Windows 10
+
+Windows versions older than Windows 10 require `wuident.cab` to be present in
+the same directory as the main PHP file of this project to work.
 
 ### License
 This project is licensed under the MIT License. See `LICENSE` for details.
